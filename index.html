@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Игра "Астероиды"</title>
+    <!-- Подключение внешнего файла стилей -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Заголовок игры -->
+    <h1>Игра "Астероиды"</h1>
+
+    <!-- Канвас для отрисовки игры -->
+    <canvas id="gameCanvas" width="800" height="600"></canvas>
+
+    <!-- Описание игры -->
+    <p>Наберите очки и достигайте новых уровней!</p>
+
+    <!-- Оверлей (главное меню, пауза, окончание игры) -->
+    <div id="overlay">
+        <h1 id="overlayMessage">Главное меню</h1>
+        <button id="startButton">Начать игру</button>
+        <button id="multiplayerButton">Играть вместе</button>
+        <select id="themeSelect">
+            <option value="dark" selected>Тёмная тема</option>
+            <option value="light">Светлая тема</option>
+        </select>
+        <button id="continueButton" style="display: none;">Продолжить</button>
+        <button id="restartButton" style="display: none;">Заново</button>
+        <button id="mainMenuButton" style="display: none;">Выйти в главное меню</button>
+
+        <!-- Настройка игроков для мультиплеера -->
+        <div id="multiplayerSetup" style="display: none;">
+            <div class="player-setup">
+                <div class="player-section" id="player1Section">
+                    <h2>Игрок 1</h2>
+                    <p>Управление: A и D, стрельба: Пробел</p>
+                    <p>Выберите цвет:</p>
+                    <div class="color-selector" id="player1Colors"></div>
+                </div>
+                <div class="player-section" id="player2Section">
+                    <h2>Игрок 2</h2>
+                    <p>Управление: Стрелки, стрельба: Правый Ctrl</p>
+                    <p>Выберите цвет:</p>
+                    <div class="color-selector" id="player2Colors"></div>
+                </div>
+            </div>
+            <button id="startMultiplayerButton" style="display: none;">Начать игру</button>
+        </div>
+    </div>
+
+    <!-- Подключение внешнего файла скриптов -->
+    <script src="scripts.js" defer></script>
+</body>
+</html>

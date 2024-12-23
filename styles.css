@@ -1,0 +1,99 @@
+/* Основные стили канваса */
+canvas {
+    background: #000;
+    display: block;
+    margin: 0 auto;
+    position: relative;
+    z-index: 1;
+}
+
+/* Стили для тела страницы */
+body {
+    text-align: center;
+    color: #fff;
+    background: #000;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    font-family: Arial, sans-serif;
+}
+
+/* Стили оверлея (меню и пауза) */
+#overlay {
+    display: block;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 800px;
+    background: rgba(0, 0, 0, 0.7);
+    text-align: center;
+    padding: 20px;
+    z-index: 2;
+    border: 5px solid #fff;
+    box-sizing: border-box;
+    border-radius: 10px;
+}
+
+/* Стили для кнопок и селектов в оверлее */
+#overlay button, 
+#overlay select {
+    padding: 10px 20px;
+    font-size: 18px;
+    cursor: pointer;
+    margin: 10px auto;
+    background: #333;
+    color: white;
+    border: 2px solid #fff;
+    border-radius: 5px;
+    display: block;
+}
+
+/* Стили при наведении на кнопки и селекты */
+#overlay button:hover, 
+#overlay select:hover {
+    background: #555;
+}
+
+/* Специфическая ширина для селектов */
+#overlay select {
+    width: auto;
+}
+
+/* Стилизация секций настройки игроков для мультиплеера */
+.player-setup {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.player-section {
+    width: 45%;
+    text-align: center;
+    color: inherit;
+}
+
+.color-selector {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.color-button {
+    width: 30px;
+    height: 30px;
+    margin: 5px;
+    border: 2px solid #fff;
+    cursor: pointer;
+    border-radius: 50%;
+}
+
+.color-button.selected {
+    border: 4px solid yellow;
+}
+
+/* Дополнительные стили для улучшения внешнего вида */
+h1, h2, p {
+    margin: 10px 0;
+}
